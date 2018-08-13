@@ -1,0 +1,152 @@
+[
+    {
+      "LegName" :"Leg_head_left",
+      "LEG":[
+      {
+        "SteeringEngine"  :"shank",
+        "motorid"  :"#1",
+        "iMax"     :"2500",
+        "iMin"     :"550",
+        "iMiddle"  :"1500"
+      },
+      {
+        "SteeringEngine"  :"thigh",
+        "motorid"  :"#2",
+        "iMax"     :"2400",
+        "iMin"     :"500",
+        "iMiddle"  :"1500"
+      },
+      {
+        "SteeringEngine"  :"waist",
+        "motorid"  :"#3",
+        "iMax"     :"700",
+        "iMin"     :"1700",
+        "iMiddle"  :"1300"
+      }
+    ]},
+    {
+      "LegName" :"Leg_middle_left",
+      "LEG":[
+        {
+          "SteeringEngine"  :"shank",
+          "motorid"  :"#4",
+          "iMax"     :"2500",
+          "iMin"     :"550",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"thigh",
+          "motorid"  :"#5",
+          "iMax"     :"2500",
+          "iMin"     :"500",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"waist",
+          "motorid"  :"#6",
+          "iMax"     :"900",
+          "iMin"     :"2200",
+          "iMiddle"  :"1300"
+        }
+      ]},
+    {
+      "LegName" :"Leg_tail_left",
+      "LEG":[
+        {
+          "SteeringEngine"  :"shank",
+          "motorid"  :"#7",
+          "iMax"     :"2500",
+          "iMin"     :"550",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"thigh",
+          "motorid"  :"#8",
+          "iMax"     :"2500",
+          "iMin"     :"400",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"waist",
+          "motorid"  :"#9",
+          "iMax"     :"900",
+          "iMin"     :"2200",
+          "iMiddle"  :"1000"
+        }
+      ]},
+    {
+      "LegName" :"Leg_tail_right",
+      "LEG":[
+        {
+          "SteeringEngine"  :"shank",
+          "motorid"  :"#22",
+          "iMax"     :"500",
+          "iMin"     :"2500",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"thigh",
+          "motorid"  :"#23",
+          "iMax"     :"400",
+          "iMin"     :"2500",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"waist",
+          "motorid"  :"#24",
+          "iMax"     :"2200",
+          "iMin"     :"900",
+          "iMiddle"  :"1600"
+        }
+      ]},
+    {
+      "LegName" :"Leg_middle_right",
+      "LEG":[
+        {
+          "SteeringEngine"  :"shank",
+          "motorid"  :"#25",
+          "iMax"     :"550",
+          "iMin"     :"2500",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"thigh",
+          "motorid"  :"#26",
+          "iMax"     :"500",
+          "iMin"     :"2500",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"waist",
+          "motorid"  :"#27",
+          "iMax"     :"2200",
+          "iMin"     :"900",
+          "iMiddle"  :"1300"
+        }
+      ]},
+    {
+      "LegName" :"Leg_head_right",
+      "LEG":[
+        {
+          "SteeringEngine"  :"shank",
+          "motorid"  :"#28",
+          "iMax"     :"550",
+          "iMin"     :"2500",
+          "iMiddle"  :"1500"
+        },
+        {
+          "SteeringEngine"  :"thigh",
+          "motorid"  :"#29",
+          "iMax"     :"500",
+          "iMin"     :"2400",
+          "iMiddle"  :"1300"
+        },
+        {
+          "SteeringEngine"  :"waist",
+          "motorid"  :"#30",
+          "iMax"     :"1900",
+          "iMin"     :"900",
+          "iMiddle"  :"1300"
+        }
+      ]}
+  ]
