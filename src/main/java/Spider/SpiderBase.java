@@ -10,6 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public abstract class SpiderBase implements Spider{
     private static Logger Log = LoggerFactory.getLogger(SpiderBase.class);
@@ -112,7 +114,30 @@ public abstract class SpiderBase implements Spider{
     public void commit(int time){
         Leg_head_left.commit();// or other legs to commit;
     }
+    public void SetRunString(String actionstring){
 
+        String pos_params[] = actionstring.split("#");
+        Map<Integer,Integer> pos_params_map = new ConcurrentHashMap<Integer, Integer>();
+        for(String cur : pos_params){
+            if(cur.equals("") == true) continue;
+            int i = cur.indexOf("T");
+            if( i != -1){
+                cur = cur.substring(0,i);
+            }
+            String str[] = cur.split("P");
+            pos_params_map.put(Integer.valueOf(str[0]),Integer.valueOf(str[1]));
+        }
+
+        pi.clear();
+        Leg_head_left.run(pos_params_map.get(3),pos_params_map.get(2),pos_params_map.get(1));
+        Leg_middle_left.run(pos_params_map.get(6),pos_params_map.get(5),pos_params_map.get(4));
+        Leg_tail_left.run(pos_params_map.get(9),pos_params_map.get(8),pos_params_map.get(7));
+        Leg_tail_right.run(pos_params_map.get(24),pos_params_map.get(23),pos_params_map.get(22));
+        Leg_middle_right.run(pos_params_map.get(27),pos_params_map.get(26),pos_params_map.get(25));
+        Leg_head_right.run(pos_params_map.get(30),pos_params_map.get(29),pos_params_map.get(28));
+        Log.debug(pi.toString());
+        System.out.println(pi);
+    }
 
     //初始位置：
     //#1P2500#2P500#3P1400

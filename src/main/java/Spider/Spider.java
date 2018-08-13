@@ -14,6 +14,6 @@ public interface Spider {
      Leg getLeg_middle_right() ;
 
      Leg getLeg_tail_right() ;
-
+     void SetRunString(String actionstring);
      void commit();
 }
