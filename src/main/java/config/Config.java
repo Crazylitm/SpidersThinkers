@@ -107,11 +107,13 @@ public class Config {
         //Class.getResource与ClassLoader.getResource()区别
 
         //String p = this.getClass().getResource("/baseaction.json").getPath();
-        String  p = Config.class.getClassLoader().getResource(filename).getPath();
-        File file = new File(p);
-        FileInputStream is =null;
         StringBuffer buf = null;
         try{
+            String  p = Config.class.getClassLoader().getResource(filename).getPath();
+            p = java.net.URLDecoder.decode(p,"utf-8");
+            File file = new File(p);
+            FileInputStream is =null;
+
             is = new FileInputStream(file);
             InputStreamReader streamReader = new InputStreamReader(is);
             BufferedReader reader = new BufferedReader(streamReader);
