@@ -135,8 +135,8 @@ public abstract class SpiderBase implements Spider{
         Leg_tail_right.run(pos_params_map.get(24),pos_params_map.get(23),pos_params_map.get(22));
         Leg_middle_right.run(pos_params_map.get(27),pos_params_map.get(26),pos_params_map.get(25));
         Leg_head_right.run(pos_params_map.get(30),pos_params_map.get(29),pos_params_map.get(28));
-        Log.debug(pi.toString());
-        System.out.println(pi);
+        //Log.debug(pi.toString());
+
     }
 
     //初始位置：

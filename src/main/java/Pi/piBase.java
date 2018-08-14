@@ -45,12 +45,14 @@ public class piBase implements Pi {
         }
 
         Serial.serialPuts(fd,buffer.append(runtime).toString());
+        Log.debug(buffer.append(runtime).toString());
+
         // display data received to console
         int dataavail = Serial.serialDataAvail(fd);
-        StringBuffer buffer = new StringBuffer();
+        StringBuffer buf = new StringBuffer();
         while(dataavail > 0) {
             byte data = Serial.serialGetByte(fd);
-            buffer.append(data);
+            buf.append(data);
             Log.debug("write Get Reture Byte=" + data);
             dataavail = Serial.serialDataAvail(fd);
         }
