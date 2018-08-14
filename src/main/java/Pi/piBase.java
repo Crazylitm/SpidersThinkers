@@ -50,6 +50,8 @@ public class piBase implements Pi {
         // display data received to console
         int dataavail = Serial.serialDataAvail(fd);
         StringBuffer buf = new StringBuffer();
+        Log.debug("fd="+fd);
+        Log.debug("datavail="+dataavail);
         while(dataavail > 0) {
             byte data = Serial.serialGetByte(fd);
             buf.append(data);
