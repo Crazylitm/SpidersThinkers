@@ -23,6 +23,13 @@ public class Config {
     static public String MOTO_STEERING_STEP         = "P50" ;
     static public String MOTO_STEERING_DEFAULT_TIME = "T500";
     static public String MOTO_STEP_TIME             = "T100";
+    static public String INIT ="INIT";
+    static public String STANDUPPRERARE = "STANDUPPRERARE";
+    static public String STANDUPBEGIN="STANDUPBEGIN";
+    static public String STANDUPEND="STANDUPEND";
+    static public String STANDUP="STANDUP";
+    static public String FORWARD="FORWARD";
+    static public String BACKWARD="BACKWARD";
 
     private List<ActionConfigBean> actions_select = null;
 

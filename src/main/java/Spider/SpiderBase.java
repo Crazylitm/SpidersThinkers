@@ -177,9 +177,6 @@ public abstract class SpiderBase implements Spider{
         System.out.println(pi);
     }
     public abstract void run();
-    public  void forward(){
-
-    }
     public void clear(){
         pi.clear();
     }
@@ -208,9 +205,5 @@ public abstract class SpiderBase implements Spider{
         return Leg_tail_right;
     }
 
-    public abstract void backward();
-    public abstract void leftward();
-    public abstract void rightward();
-    public abstract void leftRotate();
-    public abstract void rightRotate();
+
 }

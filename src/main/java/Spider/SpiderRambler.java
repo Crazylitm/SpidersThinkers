@@ -1,5 +1,8 @@
 package Spider;
 
+
+import Thinkers.Thinker;
+import Thinkers.ThinkerBase;
 import baseactions.Actions;
 import baseactions.ActionsBase;
 import event.Event;
@@ -11,9 +14,11 @@ public class SpiderRambler extends SpiderBase {
     private static Logger Log = LoggerFactory.getLogger(SpiderRambler.class);
     final  Event event = new EventBase();
     private Actions actions = new ActionsBase();
+    private Thinker thinker = new ThinkerBase();
     public  void run(){
         while(event.isRunning()){
             try {
+                    actions = thinker.getNextActionType(actions);
                     actions.run(this);
                     this.commit();
             }catch (Exception e){
@@ -21,22 +26,19 @@ public class SpiderRambler extends SpiderBase {
             }
         }
     }
-    public  void forward(){
-        actions = new ActionsBase("FORWARD");
-    }
-    public  void backward(){
+    /*
+     type : INIT,
+            STANDUPPRERARE,
+            STANDUPBEGIN,
+            STANDUPBEGIN,
+            STANDUPEND,
+            STANDUP,
+            FORWARD,
+            BACKWARD,
 
+     */
+    public void SetActions(String type){
+        actions.SetActionType(type);
     }
-    public  void leftward(){
 
-    }
-    public  void rightward(){
-
-    }
-    public  void leftRotate(){
-
-    }
-    public  void rightRotate(){
-
-    }
 }

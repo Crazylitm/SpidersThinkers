@@ -16,7 +16,7 @@ public class piBase implements Pi {
     }
     public void init() {
         // open serial port for communication
-        int fd = 1;//Serial.serialOpen(Serial.DEFAULT_COM_PORT, 9600);
+        int fd = Serial.serialOpen(Serial.DEFAULT_COM_PORT, 9600);
         if (fd == -1) {
             Log.error("==>> SERIAL SETUP FAILED");
             return;
@@ -43,6 +43,7 @@ public class piBase implements Pi {
         if(fd == 0 ){
             init();
         }
+
         Serial.serialPuts(fd,buffer.append(runtime).toString());
         // display data received to console
         int dataavail = Serial.serialDataAvail(fd);
@@ -53,6 +54,14 @@ public class piBase implements Pi {
             Log.debug("write Get Reture Byte=" + data);
             dataavail = Serial.serialDataAvail(fd);
         }
+
+        try {
+            Thread.sleep(Long.valueOf(runtime));
+        }catch (Exception e){
+            Log.error("Sleep =" +runtime + " is error");
+            e.printStackTrace();
+        }
+
         return buffer.toString();
     }
 }

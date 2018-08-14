@@ -20,18 +20,31 @@ public class ActionsBase implements Actions {
         this("INIT");
     }
     public ActionsBase(String name){
-        this.name = name;
+        SetActionType(name);
+    }
+    public String getType(){
+        return name;
+    }
+    public void SetActionType(String type){
+        this.name = type;
         try {
             currentActionsList = cfg.getCommandByType(name);
+            curActionPos =0;
         }catch (Exception e){
             e.printStackTrace();
         }
-
+    }
+    public Boolean isEnd(){
+        if(curActionPos >= currentActionsList.size() ||
+                curActionPos == 0)
+            return true;
+        else
+            return false;
     }
     public void run(Spider spider){
         ActionString action = currentActionsList.get(curActionPos++);
         spider.SetRunString(action.getCommandString());
-        if(curActionPos >= currentActionsList.size()) curActionPos = 0;
+        if(curActionPos > currentActionsList.size()) curActionPos = 0;
         return;
     }
     public void run(){
