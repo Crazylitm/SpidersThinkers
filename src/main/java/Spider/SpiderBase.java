@@ -25,6 +25,7 @@ public abstract class SpiderBase implements Spider{
     Pi pi =null;
     public SpiderBase(){
         pi = new piBase();
+        Log.debug("SpiderBase pid = new piBase() pi ="+pi);
         loadLegMaxMinConfigJson();
         init();
         //单独测试过这每个Leg的3个舵机的运动位置，在这里初始化所有的设定
@@ -62,6 +63,7 @@ public abstract class SpiderBase implements Spider{
     }
 
     private void init(){
+        Log.debug("init begin pi="+pi );
         if(spiderConfigs == null){
             loadLegMaxMinConfigJson();
         }
