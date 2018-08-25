@@ -16,7 +16,7 @@ public class piBase implements Pi {
     }
     public void init() {
         // open serial port for communication
-        int fd = Serial.serialOpen(Serial.DEFAULT_COM_PORT, 9600);
+        fd = Serial.serialOpen(Serial.DEFAULT_COM_PORT, 9600);
         Log.debug("Serial.serialOpen(Serial.DEFAULT_COM_PORT, 9600); fd="+fd);
         if (fd == -1) {
             Log.error("==>> SERIAL SETUP FAILED");
