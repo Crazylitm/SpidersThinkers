@@ -21,7 +21,7 @@ public class SpiderRambler extends SpiderBase {
                     actions = thinker.getNextActionType(actions);
                     actions.run(this);
                     this.commit();
-                    Thread.sleep(1000);
+                    //Thread.sleep(1000);
             }catch (Exception e){
                 Log.error("SpiderRambler is error!" + e);
             }
