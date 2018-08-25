@@ -77,6 +77,7 @@ public abstract class SpiderBase implements Spider{
                             Integer.valueOf(leg.getiMiddle()),
                             pi,
                             leg.getMotorid());
+                    Log.debug("init for() pi="+pi +"== motoid="+leg.getMotorid());
                     if(leg.getSteeringEngine().equals("shank")){
                         shank = se;
                     }else  if(leg.getSteeringEngine().equals("thigh")){

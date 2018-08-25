@@ -29,7 +29,7 @@ public class piBase implements Pi {
 
     @Override
     public String toString() {
-        return buffer.toString();
+        return "fd="+fd+"---buffer="+buffer.toString();
     }
 
     void print(){
@@ -41,10 +41,10 @@ public class piBase implements Pi {
     }
 
     public String commit(String runtime){
-        /*
+
         if(fd == 0 ){
             init();
-        }*/
+        }
         Log.debug("commit  fd =" +fd);
         Serial.serialPuts(fd,buffer.append(runtime).toString());
         Log.debug("commit.Serial.serialPuts="+buffer.append(runtime).toString());
