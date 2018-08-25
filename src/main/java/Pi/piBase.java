@@ -46,7 +46,7 @@ public class piBase implements Pi {
             init();
         }
         Log.debug("commit  fd =" +fd);
-        Serial.serialPuts(fd,buffer.append(runtime).toString());
+        Serial.serialPuts(fd,buffer.append(runtime).append("\r\n").toString());
         Log.debug("commit.Serial.serialPuts="+buffer.append(runtime).toString());
 
         // display data received to console
@@ -63,6 +63,7 @@ public class piBase implements Pi {
 
         try {
              runtime= runtime.substring(runtime.indexOf("T")+1,runtime.length());
+             Log.debug("commit runtime="+runtime);
             Thread.sleep(Long.valueOf(runtime));
         }catch (Exception e){
             Log.error("Sleep =" +runtime + " is error");
