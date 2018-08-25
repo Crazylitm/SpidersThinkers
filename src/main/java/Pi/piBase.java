@@ -17,6 +17,7 @@ public class piBase implements Pi {
     public void init() {
         // open serial port for communication
         int fd = Serial.serialOpen(Serial.DEFAULT_COM_PORT, 9600);
+        Log.debug("Serial.serialOpen(Serial.DEFAULT_COM_PORT, 9600); fd="+fd);
         if (fd == -1) {
             Log.error("==>> SERIAL SETUP FAILED");
             return;
@@ -45,7 +46,7 @@ public class piBase implements Pi {
         }
 
         Serial.serialPuts(fd,buffer.append(runtime).toString());
-        Log.debug(buffer.append(runtime).toString());
+        Log.debug("commit.Serial.serialPuts="+buffer.append(runtime).toString());
 
         // display data received to console
         int dataavail = Serial.serialDataAvail(fd);
